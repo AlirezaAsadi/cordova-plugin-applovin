@@ -780,7 +780,11 @@ public class AppLovinPlugin extends CordovaPlugin {
         cordova.getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                interstitialAds.show();
+                try {
+                    // If the interstitial is not ready yet, dont throw exception
+                    interstitialAds.show();
+                } catch (Exception e) {
+                }
             }
         });
         return null;
