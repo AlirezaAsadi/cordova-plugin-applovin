@@ -199,7 +199,7 @@ public class AppLovinPlugin extends CordovaPlugin {
 
         AppLovinSdk.initializeSdk(cordova.getActivity().getApplicationContext());
 
-        AppLovinSdk.getInstance(cordova.getActivity().getApplicationContext()).getSettings().setTestAdsEnabled(true);
+        AppLovinSdk.getInstance(cordova.getActivity().getApplicationContext()).getSettings().setTestAdsEnabled(false);
 
         // Warn user if SDK key is invalid
 //        boolean isLegitSdkKey = checkSdkKey();
